@@ -1,0 +1,9 @@
+{
+	"name": "GopalamBalakrsihnaResources",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c20478af-7b6d-44b7-974e-85591be6a76e",
+		"tenantId": "6f94a7b2-9c12-48da-91b0-026c4144a2b5"
+	}
+}
