@@ -1,0 +1,47 @@
+{
+	"name": "BG_PPLN1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Azure Data Explorer Command1",
+				"type": "AzureDataExplorerCommand",
+				"dependsOn": [
+					{
+						"activity": "BG_NTBK1",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"commandTimeout": "00:20:00"
+				}
+			},
+			{
+				"name": "BG_NTBK1",
+				"type": "SynapseNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"snapshot": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
