@@ -22,6 +22,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"command": ".show tables;\n$command_results\n| count",
 					"commandTimeout": "00:20:00"
 				}
 			},
@@ -38,7 +39,20 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"snapshot": true
+					"notebook": {
+						"referenceName": {
+							"value": ".show tables;\n$command_results\n| count",
+							"type": "Expression"
+						},
+						"type": "NotebookReference"
+					},
+					"snapshot": true,
+					"conf": {
+						"spark.dynamicAllocation.enabled": null,
+						"spark.dynamicAllocation.minExecutors": null,
+						"spark.dynamicAllocation.maxExecutors": null
+					},
+					"numExecutors": null
 				}
 			}
 		],
